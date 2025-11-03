@@ -7,7 +7,7 @@ module.exports = [{
 }, {
     handle: 'meta',
     options: {
-        logRequest: isDev,
+        logRequest: true,
         sendResponseTime: isDev
     }
 }, {
@@ -22,7 +22,8 @@ module.exports = [{
     handle: 'trace',
     enable: !think.isCli,
     options: {
-        debug: isDev
+        debug: isDev,
+        error: true
     }
 }, {
     handle: 'payload',
